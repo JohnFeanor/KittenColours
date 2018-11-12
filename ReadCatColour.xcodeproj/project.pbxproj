@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4FEEB4882199838300DE075C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEB4872199838300DE075C /* AppDelegate.swift */; };
+		4FEEB48A2199838400DE075C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FEEB4892199838400DE075C /* Assets.xcassets */; };
+		4FEEB48D2199838400DE075C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FEEB48B2199838400DE075C /* MainMenu.xib */; };
+		4FEEB4992199838400DE075C /* ReadCatColourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEB4982199838400DE075C /* ReadCatColourTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4FEEB4952199838400DE075C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FEEB47C2199838300DE075C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FEEB4832199838300DE075C;
+			remoteInfo = ReadCatColour;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4FEEB4842199838300DE075C /* ReadCatColour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadCatColour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FEEB4872199838300DE075C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4FEEB4892199838400DE075C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4FEEB48C2199838400DE075C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4FEEB48E2199838400DE075C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FEEB48F2199838400DE075C /* ReadCatColour.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReadCatColour.entitlements; sourceTree = "<group>"; };
+		4FEEB4942199838400DE075C /* ReadCatColourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadCatColourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FEEB4982199838400DE075C /* ReadCatColourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadCatColourTests.swift; sourceTree = "<group>"; };
+		4FEEB49A2199838400DE075C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4FEEB4812199838300DE075C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FEEB4912199838400DE075C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4FEEB47B2199838300DE075C = {
+			isa = PBXGroup;
+			children = (
+				4FEEB4862199838300DE075C /* ReadCatColour */,
+				4FEEB4972199838400DE075C /* ReadCatColourTests */,
+				4FEEB4852199838300DE075C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4FEEB4852199838300DE075C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FEEB4842199838300DE075C /* ReadCatColour.app */,
+				4FEEB4942199838400DE075C /* ReadCatColourTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FEEB4862199838300DE075C /* ReadCatColour */ = {
+			isa = PBXGroup;
+			children = (
+				4FEEB4872199838300DE075C /* AppDelegate.swift */,
+				4FEEB4892199838400DE075C /* Assets.xcassets */,
+				4FEEB48B2199838400DE075C /* MainMenu.xib */,
+				4FEEB48E2199838400DE075C /* Info.plist */,
+				4FEEB48F2199838400DE075C /* ReadCatColour.entitlements */,
+			);
+			path = ReadCatColour;
+			sourceTree = "<group>";
+		};
+		4FEEB4972199838400DE075C /* ReadCatColourTests */ = {
+			isa = PBXGroup;
+			children = (
+				4FEEB4982199838400DE075C /* ReadCatColourTests.swift */,
+				4FEEB49A2199838400DE075C /* Info.plist */,
+			);
+			path = ReadCatColourTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4FEEB4832199838300DE075C /* ReadCatColour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FEEB49D2199838400DE075C /* Build configuration list for PBXNativeTarget "ReadCatColour" */;
+			buildPhases = (
+				4FEEB4802199838300DE075C /* Sources */,
+				4FEEB4812199838300DE075C /* Frameworks */,
+				4FEEB4822199838300DE075C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReadCatColour;
+			productName = ReadCatColour;
+			productReference = 4FEEB4842199838300DE075C /* ReadCatColour.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4FEEB4932199838400DE075C /* ReadCatColourTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FEEB4A02199838400DE075C /* Build configuration list for PBXNativeTarget "ReadCatColourTests" */;
+			buildPhases = (
+				4FEEB4902199838400DE075C /* Sources */,
+				4FEEB4912199838400DE075C /* Frameworks */,
+				4FEEB4922199838400DE075C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FEEB4962199838400DE075C /* PBXTargetDependency */,
+			);
+			name = ReadCatColourTests;
+			productName = ReadCatColourTests;
+			productReference = 4FEEB4942199838400DE075C /* ReadCatColourTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4FEEB47C2199838300DE075C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Feanor;
+				TargetAttributes = {
+					4FEEB4832199838300DE075C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					4FEEB4932199838400DE075C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 4FEEB4832199838300DE075C;
+					};
+				};
+			};
+			buildConfigurationList = 4FEEB47F2199838300DE075C /* Build configuration list for PBXProject "ReadCatColour" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4FEEB47B2199838300DE075C;
+			productRefGroup = 4FEEB4852199838300DE075C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FEEB4832199838300DE075C /* ReadCatColour */,
+				4FEEB4932199838400DE075C /* ReadCatColourTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4FEEB4822199838300DE075C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FEEB48A2199838400DE075C /* Assets.xcassets in Resources */,
+				4FEEB48D2199838400DE075C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FEEB4922199838400DE075C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FEEB4802199838300DE075C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FEEB4882199838300DE075C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FEEB4902199838400DE075C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FEEB4992199838400DE075C /* ReadCatColourTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FEEB4962199838400DE075C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FEEB4832199838300DE075C /* ReadCatColour */;
+			targetProxy = 4FEEB4952199838400DE075C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4FEEB48B2199838400DE075C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FEEB48C2199838400DE075C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4FEEB49B2199838400DE075C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4FEEB49C2199838400DE075C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4FEEB49E2199838400DE075C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ReadCatColour/ReadCatColour.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MW4BK677PW;
+				INFOPLIST_FILE = ReadCatColour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.ReadCatColour;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		4FEEB49F2199838400DE075C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ReadCatColour/ReadCatColour.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MW4BK677PW;
+				INFOPLIST_FILE = ReadCatColour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.ReadCatColour;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		4FEEB4A12199838400DE075C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MW4BK677PW;
+				INFOPLIST_FILE = ReadCatColourTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.ReadCatColourTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReadCatColour.app/Contents/MacOS/ReadCatColour";
+			};
+			name = Debug;
+		};
+		4FEEB4A22199838400DE075C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MW4BK677PW;
+				INFOPLIST_FILE = ReadCatColourTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.ReadCatColourTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReadCatColour.app/Contents/MacOS/ReadCatColour";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FEEB47F2199838300DE075C /* Build configuration list for PBXProject "ReadCatColour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FEEB49B2199838400DE075C /* Debug */,
+				4FEEB49C2199838400DE075C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FEEB49D2199838400DE075C /* Build configuration list for PBXNativeTarget "ReadCatColour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FEEB49E2199838400DE075C /* Debug */,
+				4FEEB49F2199838400DE075C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FEEB4A02199838400DE075C /* Build configuration list for PBXNativeTarget "ReadCatColourTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FEEB4A12199838400DE075C /* Debug */,
+				4FEEB4A22199838400DE075C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4FEEB47C2199838300DE075C /* Project object */;
+}
