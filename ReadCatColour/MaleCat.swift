@@ -1,0 +1,22 @@
+//
+//  MaleCat.swift
+//  ReadCatColour
+//
+//  Created by John Sandercock on 14/11/18.
+//  Copyright © 2018 Feanor. All rights reserved.
+//
+
+import Foundation
+
+class MaleCat: Cat {
+
+  override var sex: Sex{
+    return .male
+  }
+  
+  
+  override func awakeFromNib() {
+    colorMenuItems = [.black, .blue, .brown, .lilac, .cinnamon, .fawn, .red, .cream, .white, .sealPoint, .bluePoint, .chocolatePoint, .lilacPoint, .cinnamonPoint, .fawnPoint, .redPoint, .creamPoint, .sealMink, .blueMink, .chocolateMink, .lilacMink, .cinnamonMink, .fawnMink, .redMink, .creamMink, .brownSepia, .blueSepia, .chocolateSepia, .lilacSepia, .cinnamonSepia, .fawnSepia, .redSepia, .creamSepia, .white]
+    super.awakeFromNib()
+  }
+}

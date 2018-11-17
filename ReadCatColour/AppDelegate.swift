@@ -10,12 +10,20 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+  
+  var mainWindowController: MyWindowController?
 
   @IBOutlet weak var window: NSWindow!
 
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    // Insert code here to initialize your application
+    // Create a window controller
+    let mainWindowController = MyWindowController()
+    //Put the window of the window controller on screen
+    mainWindowController.showWindow(self)
+    
+    //Set the property to point to the window controller
+    self.mainWindowController = mainWindowController
   }
 
   func applicationWillTerminate(_ aNotification: Notification) {
