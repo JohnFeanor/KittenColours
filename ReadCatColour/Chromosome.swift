@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Chromosome {
+public struct Chromosome: CustomStringConvertible {
   var pigment: Pair<Pigment> = Pair(.B)
   var density: Pair<Density> = Pair(.dense)
   var orange: Pair<Orange> = Pair(.o)
@@ -19,6 +19,16 @@ struct Chromosome {
   var spotting: Pair<Spotting> = Pair(.s)
   var tabby: Pair<Tabby> = Pair(.Mc)
   var ticking: Pair<Ticking> = Pair(.ti)
+  
+  public var description: String {
+    return "\(pigment) \(density) \(orange) \(agouti) \(white) \(gloving) \(albinism) \(spotting) \(tabby) \(ticking)"
+  }
+  
+  var male: Bool {
+    if orange[1] == .none { return true }
+    if orange[2] == .none { return true }
+    return false
+  }
   
   var baseColor: CatCoat {
     switch density.expression {
@@ -61,39 +71,47 @@ struct Chromosome {
     orange[1] = .O
     orange[2] = .o
   }
-  mutating func black() {
-    pigment[1] = .B
-    density[1] = .dense
+  mutating func black(dilute: Bool, pigment p: Bool) {
+    pigment.limit(with: .B, allowingRecessives: p)
+    density.limit(with: .dense, allowingRecessives: dilute)
   }
-  mutating func blue() {
-    pigment[1] = .B
-    density.limit(with: .dilute)
+  mutating func blue(pigment p: Bool) {
+    pigment.limit(with: .B, allowingRecessives: p)
+    density.fill(with: .dilute)
   }
-  mutating func brown() {
-    pigment.limit(with: .b)
-    density[1] = .dense
+  mutating func brown(dilute: Bool, pigment p: Bool) {
+    pigment.limit(with: .b, allowingRecessives: p)
+    density.limit(with: .dense, allowingRecessives: dilute)
   }
-  mutating func lilac() {
-    pigment.limit(with: .b)
-    density.limit(with: .dilute)
+  mutating func lilac(pigment p: Bool) {
+    pigment.limit(with: .b, allowingRecessives: p)
+    density.fill(with: .dilute)
   }
-  mutating func cinnamon() {
-    pigment.limit(with: .b1)
-    density[1] = .dense
+  mutating func cinnamon(dilute: Bool) {
+    pigment.fill(with: .b1)
+    density.limit(with: .dense, allowingRecessives: dilute)
   }
   mutating func fawn() {
-    pigment.limit(with: .b1)
-    density.limit(with: .dilute)
+    pigment.fill(with: .b1)
+    density.fill(with: .dilute)
   }
-  mutating func red() {
+  mutating func red(sex: Sex, dilute: Bool, pigment p: Bool) {
     orange[1] = .O
-    if orange[2] == .o { orange[2] = .O }
-    density[1] = .dense
+    if sex == .male {
+      orange[2] = .none
+    } else  {
+      orange[2] = .O
+    }
+    self.black(dilute: dilute, pigment: p)
   }
-  mutating func cream() {
+  mutating func cream(sex: Sex, pigment p: Bool) {
     orange[1] = .O
-    if orange[2] == .o { orange[2] = .O }
-    density.limit(with: .dilute)
+    if sex == .male {
+      orange[2] = .none
+    } else  {
+      orange[2] = .O
+    }
+    self.blue(pigment: p)
  }
   mutating func point() {
     albinism.fill(with: .cs)

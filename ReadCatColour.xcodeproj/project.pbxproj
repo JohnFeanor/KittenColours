@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F380B7121A688AB00AE7444 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F380B7021A688AB00AE7444 /* Window.xib */; };
 		4F7112AA219CC31700E3AA4E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7112A9219CC31700E3AA4E /* Globals.swift */; };
 		4F7112AB219CC31700E3AA4E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7112A9219CC31700E3AA4E /* Globals.swift */; };
 		4F72DC4A219EC15000EB7C7D /* FemaleCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72DC49219EC15000EB7C7D /* FemaleCat.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F380B7021A688AB00AE7444 /* Window.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
 		4F7112A9219CC31700E3AA4E /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		4F72DC49219EC15000EB7C7D /* FemaleCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleCat.swift; sourceTree = "<group>"; };
 		4FA0DAFB219D76A900D1BB42 /* Coat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coat.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				4FEEB4892199838400DE075C /* Assets.xcassets */,
 				4FEEB48B2199838400DE075C /* MainMenu.xib */,
 				4FEEB4A4219983B800DE075C /* MyWindowController.xib */,
+				4F380B7021A688AB00AE7444 /* Window.xib */,
 				4FEEB4AA2199912800DE075C /* RecessiveSheetHandler.xib */,
 				4FEEB48E2199838400DE075C /* Info.plist */,
 				4FEEB48F2199838400DE075C /* ReadCatColour.entitlements */,
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FEEB4A6219983B800DE075C /* MyWindowController.xib in Resources */,
+				4F380B7121A688AB00AE7444 /* Window.xib in Resources */,
 				4FEEB48A2199838400DE075C /* Assets.xcassets in Resources */,
 				4FEEB4AC2199912800DE075C /* RecessiveSheetHandler.xib in Resources */,
 				4FEEB48D2199838400DE075C /* MainMenu.xib in Resources */,

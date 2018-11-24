@@ -25,6 +25,8 @@ protocol Gene {
    - `false` otherwise
  */
   func dominates(other: Self) -> Bool
+  
+  var code: String { get }
 }
 
 enum Pigment: Gene {
@@ -55,6 +57,17 @@ enum Pigment: Gene {
       return .b
     }
   }
+  
+  var code: String {
+    switch self {
+    case .B:
+      return "B"
+    case .b:
+      return "b"
+    case .b1:
+      return "b1"
+    }
+  }
 }
 
 enum Density: Gene {
@@ -76,6 +89,15 @@ enum Density: Gene {
       return .dilute
     default:
       return .dense
+    }
+  }
+  
+  var code: String {
+    switch self {
+    case .dense:
+      return "D"
+    case .dilute:
+      return "d"
     }
   }
 }
@@ -113,6 +135,17 @@ enum Orange: Gene {
       return .none
     }
   }
+  
+  var code:String {
+    switch self {
+    case .O:
+      return "O"
+    case .o:
+      return "o"
+    case .none:
+      return "_"
+    }
+  }
 }
 
 enum Agouti: Gene {
@@ -138,6 +171,15 @@ enum Agouti: Gene {
       return .A
     }
   }
+  
+  var code: String {
+    switch self {
+    case .A:
+      return "A"
+    case .a:
+      return "a"
+    }
+  }
 }
 
 enum White: String, Gene, CustomStringConvertible {
@@ -158,7 +200,7 @@ enum White: String, Gene, CustomStringConvertible {
       return false
     }
   }
-  
+   
   func fuse(other: White) -> White {
     switch (self, other) {
     case (.notWhite, .notWhite):
@@ -167,6 +209,15 @@ enum White: String, Gene, CustomStringConvertible {
       return .white
     }
   }
+    
+    var code: String {
+      switch self {
+      case .white:
+        return "W"
+      case .notWhite:
+        return "w"
+      }
+    }
 }
 
 enum Gloving: Gene, CustomStringConvertible {
@@ -193,6 +244,15 @@ enum Gloving: Gene, CustomStringConvertible {
       return .gloving
     default:
       return .none
+    }
+  }
+  
+  var code: String {
+    switch self {
+    case .gloving:
+      return "g"
+    case .none:
+      return "Ng"
     }
   }
 }
@@ -267,6 +327,21 @@ enum Albinism: Gene {
       return .pinkEyedAlbino
     }
   }
+  
+  var code: String {
+    switch self {
+    case .C:
+      return "C"
+    case .cs:
+      return "cs"
+    case .cb:
+      return "cb"
+    case .ca:
+      return "ca"
+    case .c:
+      return "c"
+    }
+  }
 }
 
 enum Patching: CustomStringConvertible {
@@ -309,6 +384,15 @@ enum Spotting: Gene {
       return .biColor
     }
   }
+  
+  var code: String {
+    switch self {
+    case .S:
+      return "S"
+    case .s:
+      return "s"
+    }
+  }
 }
 
 enum Tabby: Gene, CustomStringConvertible {
@@ -341,6 +425,15 @@ enum Tabby: Gene, CustomStringConvertible {
       return .Mc
     }
   }
+  
+  var code: String {
+    switch self {
+    case .Mc:
+      return "Mc"
+    case .mc:
+      return "mc"
+    }
+  }
 }
 
 enum Ticking: Gene, CustomStringConvertible {
@@ -371,6 +464,15 @@ enum Ticking: Gene, CustomStringConvertible {
       return .ti
     default:
       return .Ti
+    }
+  }
+  
+  var code: String {
+    switch self {
+    case .Ti:
+      return "Ti"
+    case .ti:
+      return "ti"
     }
   }
 }

@@ -22,3 +22,21 @@ extension Array {
     return self[index]
   }
 }
+
+// Recursive
+
+func gcdr (_ dividend: Int, _ divisor: Int) -> Int {
+  var a = abs(dividend); var b = abs(divisor)
+  if (b > a) { swap(&a, &b) }
+  return gcd_rec(a,b)
+}
+
+private func gcd_rec(_ a: Int, _ b: Int) -> Int {
+  return b == 0 ? a : gcd_rec(b, a % b)
+}
+
+func set(flag:  inout Bool, to: Bool) {
+  if to != flag {
+    flag = to
+  }
+}
