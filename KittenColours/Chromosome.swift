@@ -138,16 +138,23 @@ public struct Chromosome: CustomStringConvertible {
     if orange.expression == .tortie {
       ans += " \(CatCoat.tortie)"
     }
-
+    
+    if gloving.expression == .gloving {
       ans += " \(gloving.expression.description)"
+    }
     
     if agouti.expression.active {
       if ticking.expression.active { ans += " \(CatCoat.ticked)" }
       else { ans += " \(tabby.expression.description)" }
     }
 
-    ans += " \(colorRestriction.description)"
-    ans += " \(spotting.expression.description)"
+    if colorRestriction != .none {
+      ans += " \(colorRestriction.description)"
+    }
+    
+    if spotting.expression != .none {
+      ans += " \(spotting.expression.description)"
+    }
     
     return ans
   }

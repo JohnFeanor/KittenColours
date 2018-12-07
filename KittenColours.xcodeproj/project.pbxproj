@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F380B7121A688AB00AE7444 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F380B7021A688AB00AE7444 /* Window.xib */; };
+		4F0C9E3121B1F1E40035034C /* KittenColours Help in Resources */ = {isa = PBXBuildFile; fileRef = 4F0C9E3021B1F1E30035034C /* KittenColours Help */; };
+		4F56793721B4FC7800DBC9BF /* PrintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56793621B4FC7800DBC9BF /* PrintView.swift */; };
 		4F7112AA219CC31700E3AA4E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7112A9219CC31700E3AA4E /* Globals.swift */; };
 		4F7112AB219CC31700E3AA4E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7112A9219CC31700E3AA4E /* Globals.swift */; };
 		4F72DC4A219EC15000EB7C7D /* FemaleCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72DC49219EC15000EB7C7D /* FemaleCat.swift */; };
 		4F72DC4B219EC15000EB7C7D /* FemaleCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72DC49219EC15000EB7C7D /* FemaleCat.swift */; };
+		4F77BC0721B142C20011162A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4F77BC0621B142C20011162A /* Credits.rtf */; };
 		4FA0DAFC219D76A900D1BB42 /* Coat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA0DAFB219D76A900D1BB42 /* Coat.swift */; };
 		4FA0DAFD219D76A900D1BB42 /* Coat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA0DAFB219D76A900D1BB42 /* Coat.swift */; };
 		4FCB26BE219C312D00987537 /* MaleCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB26BD219C312D00987537 /* MaleCat.swift */; };
@@ -44,18 +46,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4F380B7021A688AB00AE7444 /* Window.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
+		4F0C9E3021B1F1E30035034C /* KittenColours Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "KittenColours Help"; sourceTree = "<group>"; };
+		4F56793621B4FC7800DBC9BF /* PrintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintView.swift; sourceTree = "<group>"; };
 		4F7112A9219CC31700E3AA4E /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		4F72DC49219EC15000EB7C7D /* FemaleCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleCat.swift; sourceTree = "<group>"; };
+		4F77BC0621B142C20011162A /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		4F77BC0821B1454F0011162A /* KittenColours.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KittenColours.entitlements; sourceTree = "<group>"; };
+		4F77BC0921B145BB0011162A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FA0DAFB219D76A900D1BB42 /* Coat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coat.swift; sourceTree = "<group>"; };
 		4FCB26BD219C312D00987537 /* MaleCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaleCat.swift; sourceTree = "<group>"; };
-		4FEEB4842199838300DE075C /* ReadCatColour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadCatColour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FEEB4842199838300DE075C /* KittenColours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KittenColours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FEEB4872199838300DE075C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FEEB4892199838400DE075C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FEEB48C2199838400DE075C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		4FEEB48E2199838400DE075C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FEEB48F2199838400DE075C /* ReadCatColour.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReadCatColour.entitlements; sourceTree = "<group>"; };
-		4FEEB4942199838400DE075C /* ReadCatColourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadCatColourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FEEB4942199838400DE075C /* KittenColoursTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KittenColoursTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FEEB4982199838400DE075C /* ReadCatColourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadCatColourTests.swift; sourceTree = "<group>"; };
 		4FEEB49A2199838400DE075C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FEEB4A3219983B800DE075C /* MyWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWindowController.swift; sourceTree = "<group>"; };
@@ -89,8 +93,8 @@
 		4FEEB47B2199838300DE075C = {
 			isa = PBXGroup;
 			children = (
-				4FEEB4862199838300DE075C /* ReadCatColour */,
-				4FEEB4972199838400DE075C /* ReadCatColourTests */,
+				4FEEB4862199838300DE075C /* KittenColours */,
+				4FEEB4972199838400DE075C /* KittenColoursTests */,
 				4FEEB4852199838300DE075C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,17 +102,19 @@
 		4FEEB4852199838300DE075C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4FEEB4842199838300DE075C /* ReadCatColour.app */,
-				4FEEB4942199838400DE075C /* ReadCatColourTests.xctest */,
+				4FEEB4842199838300DE075C /* KittenColours.app */,
+				4FEEB4942199838400DE075C /* KittenColoursTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4FEEB4862199838300DE075C /* ReadCatColour */ = {
+		4FEEB4862199838300DE075C /* KittenColours */ = {
 			isa = PBXGroup;
 			children = (
+				4F77BC0821B1454F0011162A /* KittenColours.entitlements */,
 				4FEEB4872199838300DE075C /* AppDelegate.swift */,
 				4FEEB4A3219983B800DE075C /* MyWindowController.swift */,
+				4F56793621B4FC7800DBC9BF /* PrintView.swift */,
 				4F7112A9219CC31700E3AA4E /* Globals.swift */,
 				4FF62939219AD93400FC7019 /* Gene.swift */,
 				4FF6293C219AD95A00FC7019 /* Pair.swift */,
@@ -121,29 +127,29 @@
 				4FEEB4892199838400DE075C /* Assets.xcassets */,
 				4FEEB48B2199838400DE075C /* MainMenu.xib */,
 				4FEEB4A4219983B800DE075C /* MyWindowController.xib */,
-				4F380B7021A688AB00AE7444 /* Window.xib */,
 				4FEEB4AA2199912800DE075C /* RecessiveSheetHandler.xib */,
-				4FEEB48E2199838400DE075C /* Info.plist */,
-				4FEEB48F2199838400DE075C /* ReadCatColour.entitlements */,
+				4F77BC0921B145BB0011162A /* Info.plist */,
+				4F0C9E3021B1F1E30035034C /* KittenColours Help */,
+				4F77BC0621B142C20011162A /* Credits.rtf */,
 			);
-			path = ReadCatColour;
+			path = KittenColours;
 			sourceTree = "<group>";
 		};
-		4FEEB4972199838400DE075C /* ReadCatColourTests */ = {
+		4FEEB4972199838400DE075C /* KittenColoursTests */ = {
 			isa = PBXGroup;
 			children = (
 				4FEEB4982199838400DE075C /* ReadCatColourTests.swift */,
 				4FEEB49A2199838400DE075C /* Info.plist */,
 			);
-			path = ReadCatColourTests;
+			path = KittenColoursTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4FEEB4832199838300DE075C /* ReadCatColour */ = {
+		4FEEB4832199838300DE075C /* KittenColours */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4FEEB49D2199838400DE075C /* Build configuration list for PBXNativeTarget "ReadCatColour" */;
+			buildConfigurationList = 4FEEB49D2199838400DE075C /* Build configuration list for PBXNativeTarget "KittenColours" */;
 			buildPhases = (
 				4FEEB4802199838300DE075C /* Sources */,
 				4FEEB4812199838300DE075C /* Frameworks */,
@@ -153,14 +159,14 @@
 			);
 			dependencies = (
 			);
-			name = ReadCatColour;
+			name = KittenColours;
 			productName = ReadCatColour;
-			productReference = 4FEEB4842199838300DE075C /* ReadCatColour.app */;
+			productReference = 4FEEB4842199838300DE075C /* KittenColours.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4FEEB4932199838400DE075C /* ReadCatColourTests */ = {
+		4FEEB4932199838400DE075C /* KittenColoursTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4FEEB4A02199838400DE075C /* Build configuration list for PBXNativeTarget "ReadCatColourTests" */;
+			buildConfigurationList = 4FEEB4A02199838400DE075C /* Build configuration list for PBXNativeTarget "KittenColoursTests" */;
 			buildPhases = (
 				4FEEB4902199838400DE075C /* Sources */,
 				4FEEB4912199838400DE075C /* Frameworks */,
@@ -171,9 +177,9 @@
 			dependencies = (
 				4FEEB4962199838400DE075C /* PBXTargetDependency */,
 			);
-			name = ReadCatColourTests;
+			name = KittenColoursTests;
 			productName = ReadCatColourTests;
-			productReference = 4FEEB4942199838400DE075C /* ReadCatColourTests.xctest */;
+			productReference = 4FEEB4942199838400DE075C /* KittenColoursTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -188,6 +194,11 @@
 				TargetAttributes = {
 					4FEEB4832199838300DE075C = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 					4FEEB4932199838400DE075C = {
 						CreatedOnToolsVersion = 10.1;
@@ -195,7 +206,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4FEEB47F2199838300DE075C /* Build configuration list for PBXProject "ReadCatColour" */;
+			buildConfigurationList = 4FEEB47F2199838300DE075C /* Build configuration list for PBXProject "KittenColours" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -208,8 +219,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4FEEB4832199838300DE075C /* ReadCatColour */,
-				4FEEB4932199838400DE075C /* ReadCatColourTests */,
+				4FEEB4832199838300DE075C /* KittenColours */,
+				4FEEB4932199838400DE075C /* KittenColoursTests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,7 +231,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FEEB4A6219983B800DE075C /* MyWindowController.xib in Resources */,
-				4F380B7121A688AB00AE7444 /* Window.xib in Resources */,
+				4F77BC0721B142C20011162A /* Credits.rtf in Resources */,
+				4F0C9E3121B1F1E40035034C /* KittenColours Help in Resources */,
 				4FEEB48A2199838400DE075C /* Assets.xcassets in Resources */,
 				4FEEB4AC2199912800DE075C /* RecessiveSheetHandler.xib in Resources */,
 				4FEEB48D2199838400DE075C /* MainMenu.xib in Resources */,
@@ -251,6 +263,7 @@
 				4FF6293A219AD93400FC7019 /* Gene.swift in Sources */,
 				4FEEB4A5219983B800DE075C /* MyWindowController.swift in Sources */,
 				4FF6293D219AD95A00FC7019 /* Pair.swift in Sources */,
+				4F56793721B4FC7800DBC9BF /* PrintView.swift in Sources */,
 				4F7112AA219CC31700E3AA4E /* Globals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +288,7 @@
 /* Begin PBXTargetDependency section */
 		4FEEB4962199838400DE075C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4FEEB4832199838300DE075C /* ReadCatColour */;
+			target = 4FEEB4832199838300DE075C /* KittenColours */;
 			targetProxy = 4FEEB4952199838400DE075C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -343,7 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -398,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -411,16 +424,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ReadCatColour/ReadCatColour.entitlements;
+				CODE_SIGN_ENTITLEMENTS = KittenColours/KittenColours.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MW4BK677PW;
-				INFOPLIST_FILE = ReadCatColour/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KittenColours/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.ReadCatColour;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.KittenColours;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -430,16 +444,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ReadCatColour/ReadCatColour.entitlements;
+				CODE_SIGN_ENTITLEMENTS = KittenColours/KittenColours.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MW4BK677PW;
-				INFOPLIST_FILE = ReadCatColour/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KittenColours/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.ReadCatColour;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.KittenColours;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -462,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.ReadCatColourTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReadCatColour.app/Contents/MacOS/ReadCatColour";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KittenColours.app/Contents/MacOS/KittenColours";
 			};
 			name = Debug;
 		};
@@ -483,14 +498,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.ReadCatColourTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReadCatColour.app/Contents/MacOS/ReadCatColour";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KittenColours.app/Contents/MacOS/KittenColours";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4FEEB47F2199838300DE075C /* Build configuration list for PBXProject "ReadCatColour" */ = {
+		4FEEB47F2199838300DE075C /* Build configuration list for PBXProject "KittenColours" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4FEEB49B2199838400DE075C /* Debug */,
@@ -499,7 +514,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4FEEB49D2199838400DE075C /* Build configuration list for PBXNativeTarget "ReadCatColour" */ = {
+		4FEEB49D2199838400DE075C /* Build configuration list for PBXNativeTarget "KittenColours" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4FEEB49E2199838400DE075C /* Debug */,
@@ -508,7 +523,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4FEEB4A02199838400DE075C /* Build configuration list for PBXNativeTarget "ReadCatColourTests" */ = {
+		4FEEB4A02199838400DE075C /* Build configuration list for PBXNativeTarget "KittenColoursTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4FEEB4A12199838400DE075C /* Debug */,

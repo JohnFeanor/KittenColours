@@ -18,6 +18,7 @@ enum CatCoat: String, CustomStringConvertible {
   case red = "Red"
   case cream = "Cream"
   case white = "White"
+  case nonWhite = "Not White"
   
   case seal = "Seal"
   case chocolate = "Chocolate"

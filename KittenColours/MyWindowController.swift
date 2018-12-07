@@ -10,6 +10,7 @@ import Cocoa
 
 class MyWindowController: NSWindowController {
   
+  // Screen view outlets
   @IBOutlet weak var progress: NSProgressIndicator!
   @IBOutlet var sireCat: MaleCat!
   @IBOutlet var damCat: FemaleCat!
@@ -90,4 +91,11 @@ class MyWindowController: NSWindowController {
     progress.stopAnimation(self)
     progress.isHidden = true
   }
+  
+  /// Prints the outcome of the current mating
+  func printMatingOutcome(_ sender: NSMenuItem) {
+    let printView = PrintView(sire: sireCat, dam: damCat, maleOffspring: maleOffspring, femaleOffspring: femaleOffspring)
+    printView.printView(sender)
+  }
+  
 }

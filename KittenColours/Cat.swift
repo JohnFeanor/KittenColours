@@ -139,10 +139,13 @@ class Cat: NSObject {
     didSet {
       if brownMaskingButtonValue {
         cinnamonMaskingButtonValue = false
+        brownButtonActive = false
+        brownButtonValue = false
         genome.pigment.limit(with: .b, allowingRecessives: cinnamonButtonValue)
       }
         // MARK: ToDo
       else {
+        brownButtonActive = true
         genome.pigment[1] = .B
         genome.pigment[2] = pigmentForGene2
       }
@@ -154,10 +157,16 @@ class Cat: NSObject {
     didSet {
       if cinnamonMaskingButtonValue {
         brownMaskingButtonValue = false
+        brownButtonActive = false
+        brownButtonValue = false
+        cinnamonButtonActive = false
+        cinnamonButtonValue = false
         genome.pigment.fill(with: .b1)
       }
         // MARK: ToDo
       else {
+        brownButtonActive = true
+        cinnamonButtonActive = true
         genome.pigment[1] = .B
         genome.pigment[2] = pigmentForGene2
       }
@@ -184,6 +193,29 @@ class Cat: NSObject {
   @objc dynamic var cinnamonMaskingButtonActive: Bool = false
   
   @objc dynamic var myGenome = ""
+  
+  var recessivesCarried: [String] {
+    var ans: [String] = []
+    if diluteButtonActive && diluteButtonValue { ans.append(CatCoat.dilute.description) }
+    if brownButtonActive && brownButtonValue { ans.append(CatCoat.brown.description) }
+    if cinnamonButtonActive && cinnamonButtonValue { ans.append(CatCoat.cinnamon.description) }
+    if colorPointButtonActive && colorPointButtonValue { ans.append(CatCoat.colorPoint.description) }
+    if sepiaButtonActive && sepiaButtonValue { ans.append(CatCoat.sepia.description) }
+    if selfButtonActive && selfButtonValue { ans.append(CatCoat.nonAgouti.description) }
+    if nonWhiteButtonActive && nonWhiteButtonValue { ans.append(CatCoat.nonWhite.description) }
+    
+    return ans
+  }
+  
+  var colorsMasked: [String] {
+    var ans: [String] = []
+    if redMaskingButtonActive && redMaskingButtonValue { ans.append(CatCoat.red.description) }
+    if tortieMaskingButtonActive && tortieMaskingButtonValue { ans.append(CatCoat.red.description) }
+    if brownMaskingButtonActive && brownMaskingButtonValue { ans.append(CatCoat.brown.description) }
+    if cinnamonMaskingButtonActive && cinnamonMaskingButtonValue { ans.append(CatCoat.cinnamon.description) }
+    
+    return ans
+  }
   
   internal var genome = Chromosome()
   var sex: Sex {
