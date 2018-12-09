@@ -24,8 +24,6 @@
 		4FEEB4992199838400DE075C /* ReadCatColourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEB4982199838400DE075C /* ReadCatColourTests.swift */; };
 		4FEEB4A5219983B800DE075C /* MyWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEB4A3219983B800DE075C /* MyWindowController.swift */; };
 		4FEEB4A6219983B800DE075C /* MyWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FEEB4A4219983B800DE075C /* MyWindowController.xib */; };
-		4FEEB4AB2199912800DE075C /* RecessiveSheetHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEB4A92199912800DE075C /* RecessiveSheetHandler.swift */; };
-		4FEEB4AC2199912800DE075C /* RecessiveSheetHandler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FEEB4AA2199912800DE075C /* RecessiveSheetHandler.xib */; };
 		4FF62938219AD90D00FC7019 /* Chromosome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF62937219AD90D00FC7019 /* Chromosome.swift */; };
 		4FF6293A219AD93400FC7019 /* Gene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF62939219AD93400FC7019 /* Gene.swift */; };
 		4FF6293B219AD93400FC7019 /* Gene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF62939219AD93400FC7019 /* Gene.swift */; };
@@ -47,11 +45,11 @@
 
 /* Begin PBXFileReference section */
 		4F0C9E3021B1F1E30035034C /* KittenColours Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "KittenColours Help"; sourceTree = "<group>"; };
+		4F16AFE821BB8A4E00DCFB44 /* KittenColours.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = KittenColours.entitlements; sourceTree = "<group>"; };
 		4F56793621B4FC7800DBC9BF /* PrintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintView.swift; sourceTree = "<group>"; };
 		4F7112A9219CC31700E3AA4E /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		4F72DC49219EC15000EB7C7D /* FemaleCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleCat.swift; sourceTree = "<group>"; };
 		4F77BC0621B142C20011162A /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
-		4F77BC0821B1454F0011162A /* KittenColours.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KittenColours.entitlements; sourceTree = "<group>"; };
 		4F77BC0921B145BB0011162A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FA0DAFB219D76A900D1BB42 /* Coat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coat.swift; sourceTree = "<group>"; };
 		4FCB26BD219C312D00987537 /* MaleCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaleCat.swift; sourceTree = "<group>"; };
@@ -64,8 +62,6 @@
 		4FEEB49A2199838400DE075C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FEEB4A3219983B800DE075C /* MyWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWindowController.swift; sourceTree = "<group>"; };
 		4FEEB4A4219983B800DE075C /* MyWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyWindowController.xib; sourceTree = "<group>"; };
-		4FEEB4A92199912800DE075C /* RecessiveSheetHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecessiveSheetHandler.swift; sourceTree = "<group>"; };
-		4FEEB4AA2199912800DE075C /* RecessiveSheetHandler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecessiveSheetHandler.xib; sourceTree = "<group>"; };
 		4FF62937219AD90D00FC7019 /* Chromosome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chromosome.swift; sourceTree = "<group>"; };
 		4FF62939219AD93400FC7019 /* Gene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gene.swift; sourceTree = "<group>"; };
 		4FF6293C219AD95A00FC7019 /* Pair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
@@ -111,7 +107,7 @@
 		4FEEB4862199838300DE075C /* KittenColours */ = {
 			isa = PBXGroup;
 			children = (
-				4F77BC0821B1454F0011162A /* KittenColours.entitlements */,
+				4F16AFE821BB8A4E00DCFB44 /* KittenColours.entitlements */,
 				4FEEB4872199838300DE075C /* AppDelegate.swift */,
 				4FEEB4A3219983B800DE075C /* MyWindowController.swift */,
 				4F56793621B4FC7800DBC9BF /* PrintView.swift */,
@@ -123,11 +119,9 @@
 				4FF6293F219AD99B00FC7019 /* Cat.swift */,
 				4FCB26BD219C312D00987537 /* MaleCat.swift */,
 				4F72DC49219EC15000EB7C7D /* FemaleCat.swift */,
-				4FEEB4A92199912800DE075C /* RecessiveSheetHandler.swift */,
 				4FEEB4892199838400DE075C /* Assets.xcassets */,
 				4FEEB48B2199838400DE075C /* MainMenu.xib */,
 				4FEEB4A4219983B800DE075C /* MyWindowController.xib */,
-				4FEEB4AA2199912800DE075C /* RecessiveSheetHandler.xib */,
 				4F77BC0921B145BB0011162A /* Info.plist */,
 				4F0C9E3021B1F1E30035034C /* KittenColours Help */,
 				4F77BC0621B142C20011162A /* Credits.rtf */,
@@ -198,6 +192,9 @@
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 1;
 							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
 						};
 					};
 					4FEEB4932199838400DE075C = {
@@ -234,7 +231,6 @@
 				4F77BC0721B142C20011162A /* Credits.rtf in Resources */,
 				4F0C9E3121B1F1E40035034C /* KittenColours Help in Resources */,
 				4FEEB48A2199838400DE075C /* Assets.xcassets in Resources */,
-				4FEEB4AC2199912800DE075C /* RecessiveSheetHandler.xib in Resources */,
 				4FEEB48D2199838400DE075C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +253,6 @@
 				4FEEB4882199838300DE075C /* AppDelegate.swift in Sources */,
 				4FCB26BE219C312D00987537 /* MaleCat.swift in Sources */,
 				4FF62940219AD99B00FC7019 /* Cat.swift in Sources */,
-				4FEEB4AB2199912800DE075C /* RecessiveSheetHandler.swift in Sources */,
 				4FA0DAFC219D76A900D1BB42 /* Coat.swift in Sources */,
 				4FF62938219AD90D00FC7019 /* Chromosome.swift in Sources */,
 				4FF6293A219AD93400FC7019 /* Gene.swift in Sources */,
@@ -340,6 +335,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -401,6 +397,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;

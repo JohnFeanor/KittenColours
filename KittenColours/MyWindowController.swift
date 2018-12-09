@@ -8,6 +8,12 @@
 
 import Cocoa
 
+
+struct Offspring {
+  var chance: String
+  var colour: String
+}
+
 class MyWindowController: NSWindowController {
   
   // Screen view outlets
@@ -16,21 +22,24 @@ class MyWindowController: NSWindowController {
   @IBOutlet var damCat: FemaleCat!
   @IBOutlet weak var femaleOffspringTextField: NSTextField!
   @IBOutlet weak var maleOffspringTextField: NSTextField!
+//
+//  @objc dynamic var maleOffspring = "" {
+//    didSet {
+//      maleOffspringTextField.stringValue = maleOffspring
+//      maleOffspringTextField.sizeToFit()
+//
+//    }
+//  }
+//
+//  @objc dynamic var femaleOffspring = "" {
+//    didSet {
+//      femaleOffspringTextField.stringValue = femaleOffspring
+//      femaleOffspringTextField.sizeToFit()
+//    }
+//  }
   
-  @objc dynamic var maleOffspring = "" {
-    didSet {
-      maleOffspringTextField.stringValue = maleOffspring
-      maleOffspringTextField.sizeToFit()
-
-    }
-  }
-  
-  @objc dynamic var femaleOffspring = "" {
-    didSet {
-      femaleOffspringTextField.stringValue = femaleOffspring
-      femaleOffspringTextField.sizeToFit()
-    }
-  }
+  var maleOffspring: [Offspring] = []
+  var femaleOffspring: [Offspring] = []
 
   override var windowNibName: String {
     return "MyWindowController"
@@ -58,10 +67,8 @@ class MyWindowController: NSWindowController {
     for color in boyKittens {
       count += boyKittens.count(for: color)
     }
-    maleOffspring = ""
-    femaleOffspring = ""
-    var maleKittens: [String] = []
-    var femaleKittens: [String] = []
+    maleOffspring = []
+    femaleOffspring = []
     for color in boyKittens {
       guard let color = color as? String
         else { print("color is not a color"); break }
@@ -69,11 +76,11 @@ class MyWindowController: NSWindowController {
       let gcd = gcdr(totalChances, count)
       let reducedPossibilities = count / gcd
       let reducedChances = totalChances / gcd
-      maleKittens.append("\(reducedChances) in \(reducedPossibilities): \(color)\n")
+      maleOffspring.append(Offspring(chance: "\(reducedChances) in \(reducedPossibilities):", colour: color))
       progress.startAnimation(nil)
     }
-    maleKittens.sort()
-    maleOffspring = maleKittens.reduce("", { return $0 + $1 })
+    maleOffspring.sort(by: { $0.colour.count < $1.colour.count})
+    
     for color in girlKittens {
       guard let color = color as? String
         else { print("color is not a color"); break }
@@ -81,12 +88,18 @@ class MyWindowController: NSWindowController {
       let gcd = gcdr(totalChances, count)
       let reducedPossibilities = count / gcd
       let reducedChances = totalChances / gcd
-      femaleKittens.append("\(reducedChances) in \(reducedPossibilities): \(color)\n")
+      
+      femaleOffspring.append(Offspring(chance: "\(reducedChances) in \(reducedPossibilities):", colour: color))
       progress.increment(by: 0.1)
       progress.display()
     }
-    femaleKittens.sort()
-    femaleOffspring = femaleKittens.reduce("", { return $0 + $1 })
+    femaleOffspring.sort(by: { $0.colour.count < $1.colour.count})
+
+    maleOffspringTextField.stringValue = maleOffspring.reduce("", { $0 + $1.chance + " " + $1.colour + "\n" })
+    maleOffspringTextField.sizeToFit()
+
+    femaleOffspringTextField.stringValue = femaleOffspring.reduce("", { $0 + $1.chance + " " + $1.colour + "\n" })
+    femaleOffspringTextField.sizeToFit()
 
     progress.stopAnimation(self)
     progress.isHidden = true

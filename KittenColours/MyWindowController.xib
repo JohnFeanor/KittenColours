@@ -18,7 +18,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Cat coat colours" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+        <window title="KittenColours" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES"/>
             <rect key="contentRect" x="196" y="240" width="552" height="743"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
@@ -175,7 +175,7 @@
                                         <binding destination="GfB-wX-cll" name="content" keyPath="whiteSpotting" id="tvZ-Ze-hUs"/>
                                     </connections>
                                 </popUpButton>
-                                <popUpButton identifier="tabby" verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="TId-6S-Djl">
+                                <popUpButton identifier="tabby" toolTip="Select the tabby pattern of the sire. If the sire is displying a tabby pattern, you must also check the agouti button below" verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="TId-6S-Djl">
                                     <rect key="frame" x="129" y="42" width="100" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <popUpButtonCell key="cell" type="push" title="Tabby" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="YlG-sd-Ahm" id="pCN-Qa-en9">
@@ -278,7 +278,7 @@
                                         <binding destination="GfB-wX-cll" name="content" keyPath="whiteSpotting" id="iUX-Ef-SeD"/>
                                     </connections>
                                 </popUpButton>
-                                <popUpButton identifier="dam_tabby" verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="nCi-zL-1Xl">
+                                <popUpButton identifier="dam_tabby" toolTip="Select the tabby pattern of the dam. If the dam is displying a tabby pattern, you must also check the agouti button below" verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="nCi-zL-1Xl">
                                     <rect key="frame" x="129" y="43" width="100" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <popUpButtonCell key="cell" type="push" title="Tabby" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="5L3-6O-xq8" id="oPC-NM-6cX">

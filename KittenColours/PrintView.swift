@@ -14,32 +14,14 @@ private let arial12 = NSFont(name: "ArialMT", size: 12.0) ?? NSFont.systemFont(o
 private let stdFontHeight = arial12.capHeight * 2.0
 private let arialBold = NSFont(name: "Arial-BoldMT", size: 13.0) ?? NSFont.systemFont(ofSize: 12.0)
 private let calibri12 = NSFont(name: "Calibri", size: 12.0) ?? NSFont.systemFont(ofSize: 12.0)
-private let calibri12Height = calibri12.capHeight * 2.0
 
 class PrintView: NSView {
 
-//  @IBOutlet weak var printMaleOffspringTextField: NSTextField!
-//  @IBOutlet weak var printFemaleOffspringTextField: NSTextField!
-//
-//  @IBOutlet weak var printSireColorTextField: NSTextField!
-//  @IBOutlet weak var printDamColorTextField: NSTextField!
-//  @IBOutlet weak var printSireCarryingTextField: NSTextField!
-//  @IBOutlet weak var printSireMaskingTextField: NSTextField!
-//  @IBOutlet weak var printDamCarryingTextField: NSTextField!
-//  @IBOutlet weak var printDamMaskingTextField: NSTextField!
-//  @IBOutlet weak var maleLabel: NSTextField!
-//
-//  @IBOutlet weak var maleOffspringTextField: NSTextField!
-//  @IBOutlet weak var femaleOffspringTextField: NSTextField!
-//
-//  @IBOutlet weak var sireCat: MaleCat!
-//  @IBOutlet weak var damCat: FemaleCat!
-  
   let sireCat: Cat
   let damCat: Cat
   
-  let maleOffspring: [String]
-  let femaleOffspring: [String]
+  let maleOffspring: [Offspring]
+  let femaleOffspring: [Offspring]
   
   private var pageRect = NSRect()
   var linesPerPage = 0
@@ -51,13 +33,13 @@ class PrintView: NSView {
   let maxOffspring: Int
   
   
-  init(sire: Cat, dam: Cat, maleOffspring: String, femaleOffspring: String) {
+  init(sire: Cat, dam: Cat, maleOffspring: [Offspring], femaleOffspring: [Offspring]) {
     sireCat = sire
     damCat = dam
     
-    self.maleOffspring = Array<String>(maleOffspring.components(separatedBy: "\n").dropLast())
+    self.maleOffspring = maleOffspring
     numberMales = self.maleOffspring.count
-    self.femaleOffspring = Array<String>(femaleOffspring.components(separatedBy: "\n").dropLast())
+    self.femaleOffspring = femaleOffspring
     numberFemales = self.femaleOffspring.count
     maxOffspring = max(numberMales, numberFemales)
     
@@ -116,116 +98,166 @@ class PrintView: NSView {
   
   override func draw(_ dirtyRect: NSRect) {
     
-    func draw(string: String, using font: NSFont, centered: Bool = false, inset: Int = 0, underlined: Bool = false) -> CGFloat {
-      let size = string.size(withAttributes: [NSAttributedString.Key.font : font])
-      let yValue = currentCursorHeight - font.capHeight + size.height / 2.0
+    func drawCentred(string: String, using font: NSFont, underlined: Bool = false) {
+      let pageWidth = pageRect.maxX - pageRect.minX
+      let stringSize = string.size(withAttributes: [NSAttributedString.Key.font : font])
+      let boxWidth = min(stringSize.width, pageWidth)
+      let startingX = (pageWidth - boxWidth) / 2.0
       
-      let thePoint: NSPoint
-      let box: NSRect
-      if centered {
-        thePoint = NSPoint(x: (pageRect.minX + pageRect.maxX) / 2.0 - size.width / 2.0, y: currentCursorHeight)
-      } else {
-        let x: CGFloat
-        switch inset {
-        case 0:
-          x = pageRect.minX + 10
-        case 1:
-          x = pageRect.minX + 50.0
-        case 2:
-          x = pageRect.minX + 110.0
-        case 3:
-          x = pageRect.minX + 175.0
-        default:
-          let indent = CGFloat(inset * 50)
-          x = pageRect.minX + indent
-        }
-        thePoint = NSPoint(x: x, y: yValue)
-      }
-      box = NSRect(origin: thePoint, size: size)
+      let drawBox = NSRect(x: startingX, y: currentCursorHeight, width: boxWidth, height: stringSize.height)
+      let attributes: [NSAttributedString.Key : Any] = underlined ? [NSAttributedString.Key.font : font, NSAttributedString.Key.underlineStyle : NSNumber(integerLiteral: 1)] : [NSAttributedString.Key.font : font]
+      
+      string.draw(in: drawBox, withAttributes: attributes)
+    }
+    
+    func drawInBox(string: String, startingAt x: CGFloat = 0.0, withWidth width: CGFloat = 80.0, using font: NSFont, underlined: Bool = false) {
+      let boxHeight = string.size(withAttributes: [NSAttributedString.Key.font : font]).height
+      let startingX = pageRect.minX + x
+      let drawBox = NSRect(x: startingX, y: currentCursorHeight, width: width, height: boxHeight)
       let attributes: [NSAttributedString.Key : Any] = underlined ? [NSAttributedString.Key.font : font, NSAttributedString.Key.underlineStyle : NSNumber(integerLiteral: 1)] : [NSAttributedString.Key.font : font]
 
-     string.draw(in: box, withAttributes: attributes)
-      return size.height
+      string.draw(in: drawBox, withAttributes: attributes)
+    }
+    
+    func heightMultiplier(stringWidth: CGFloat, boxWidth: CGFloat) -> CGFloat {
+      var multiplier = Int(stringWidth / boxWidth)
+      if stringWidth.truncatingRemainder(dividingBy: boxWidth) > 0 {
+        multiplier += 1
+      }
+      return CGFloat(multiplier)
+    }
+    
+    func drawToEndOfLine(string: String, startingAt x: CGFloat = 0.0, using font: NSFont, underlined: Bool = false) -> CGFloat {
+      let boxWidth = pageRect.maxX - pageRect.minX - x
+      let stringSize = string.size(withAttributes: [NSAttributedString.Key.font : font])
+      let boxHeight = stringSize.height * heightMultiplier(stringWidth: stringSize.width, boxWidth: boxWidth)
+      let startingX = pageRect.minX + x
+      let drawBox = NSRect(x: startingX, y: currentCursorHeight, width: boxWidth, height: boxHeight)
+      let attributes: [NSAttributedString.Key : Any] = underlined ? [NSAttributedString.Key.font : font, NSAttributedString.Key.underlineStyle : NSNumber(integerLiteral: 1)] : [NSAttributedString.Key.font : font]
+
+      string.draw(in: drawBox, withAttributes: attributes)
+      return boxHeight
+    }
+    
+    func drawtoHalfWay(string: String, startingAt x: CGFloat = 0.0, using font: NSFont, underlined: Bool = false) -> CGFloat {
+      let startingX = pageRect.minX + x
+      let boxWidth = (pageRect.maxX - pageRect.minX) / 2.0 - x - 10.0
+      let stringSize = string.size(withAttributes: [NSAttributedString.Key.font : font])
+      let boxHeight: CGFloat = stringSize.height * heightMultiplier(stringWidth: stringSize.width, boxWidth: boxWidth)
+      drawInBox(string: string, startingAt: startingX, withWidth: boxWidth, using: font, underlined: underlined)
+
+      return boxHeight
+    }
+
+    func drawtoHalfWay(kitten: Offspring, startingAt x: CGFloat = 0.0, using font: NSFont) -> CGFloat {
+      let startX = pageRect.minX + x
+      drawInBox(string: kitten.chance, startingAt: startX, withWidth: 65.0, using: font)
+      let boxWidth = (pageRect.maxX - pageRect.minX) / 2.0 - x - 70.0
+      let stringSize = kitten.colour.size(withAttributes: [NSAttributedString.Key.font : font])
+      let boxHeight: CGFloat = stringSize.height * heightMultiplier(stringWidth: stringSize.width, boxWidth: boxWidth)
+      let drawBox = NSRect(x: startX + 70.0, y: currentCursorHeight, width: boxWidth, height: boxHeight)
+      let attributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.font : font]
+
+      kitten.colour.draw(in: drawBox, withAttributes: attributes)
+      return boxHeight
+    }
+    
+    func drawFromHalfWay(kitten: Offspring, using font: NSFont) -> CGFloat {
+      let startX = (pageRect.maxX - pageRect.minX) / 2.0 + 5.0
+      drawInBox(string: kitten.chance, startingAt: startX, withWidth: 65.0, using: font)
+      return drawToEndOfLine(string: kitten.colour, startingAt: startX + 65.0 - pageRect.minX, using: font)
+    }
+    
+    func drawFromHalfWay(string: String, using font: NSFont, underlined: Bool = false) -> CGFloat {
+      let startX = (pageRect.maxX - pageRect.minX) / 2.0 + 10.0
+      return drawToEndOfLine(string: string, startingAt: startX, using: font, underlined: underlined)
     }
 
     if currentPage == 0 {
       currentCursorHeight = pageRect.minY + 10.0
-      _ = draw(string: "Possible results from a mating of", using: boldFont, centered: true)
-      
+      drawCentred(string: "Possible results from a mating of", using: boldFont)
       currentCursorHeight += stdFontHeight * 2.0
-      _ = draw(string: "Sire:", using: arialBold)
+      
+      drawInBox(string: "Sire:", using: arialBold)
       let sireColour = sireCat.genome.colour
-      _ = draw(string: sireColour, using: calibri12, inset: 1)
+      currentCursorHeight += drawToEndOfLine(string: sireColour, startingAt: 40.0, using: calibri12) + 4.0
       
-      currentCursorHeight += stdFontHeight * 1.25
-      _ = draw(string: "Carrying:", using: arial12, inset: 1)
+      drawInBox(string: "Carrying:", startingAt: 50.0, using: arialBold)
       let sireCarrying = sireCat.recessivesCarried.joined(separator: ", ")
-      _ = draw(string: sireCarrying, using: calibri12, inset: 2)
-      
+      _ = drawToEndOfLine(string: sireCarrying, startingAt: 120.0, using: calibri12)
       currentCursorHeight += stdFontHeight * 1.25
-      _ = draw(string: "Masking:", using: arial12, inset: 1)
+      
+      drawInBox(string: "Masking:", startingAt: 50.0, using: arialBold)
       let sireMasking = sireCat.colorsMasked.joined(separator: ", ")
-      _ = draw(string: sireMasking, using: calibri12, inset: 2)
-      
+      _ = drawToEndOfLine(string: sireMasking, startingAt: 120.0, using: calibri12)
       currentCursorHeight += stdFontHeight * 1.25
-      _ = draw(string: "with", using: arial12, centered: true, underlined: true)
       
+      drawCentred(string: "with", using: arial12, underlined: true)
       currentCursorHeight += stdFontHeight * 1.25
-      _ = draw(string: "Dam:", using: arialBold)
+      
+      drawInBox(string: "Dam:", using: arialBold)
       let damColour = damCat.genome.colour
-      _ = draw(string: damColour, using: calibri12, inset: 1)
+      currentCursorHeight += drawToEndOfLine(string: damColour, startingAt: 40.0, using: calibri12) + 4.0
       
-      currentCursorHeight += stdFontHeight * 1.25
-      _ = draw(string: "Carrying:", using: arial12, inset: 1)
+      drawInBox(string: "Carrying:", startingAt: 50.0, using: arialBold)
       let damCarrying = damCat.recessivesCarried.joined(separator: ", ")
-      _ = draw(string: damCarrying, using: calibri12, inset: 2)
-      
+      _ = drawToEndOfLine(string: damCarrying, startingAt: 120.0, using: calibri12)
       currentCursorHeight += stdFontHeight * 1.25
-      _ = draw(string: "Masking:", using: arial12, inset: 1)
+      
+      drawInBox(string: "Masking:", startingAt: 50.0, using: arialBold)
       let damMasking = damCat.colorsMasked.joined(separator: ", ")
-      _ = draw(string: damMasking, using: calibri12, inset: 2)
+      _ = drawToEndOfLine(string: damMasking, startingAt: 120.0, using: calibri12)
+      currentCursorHeight += stdFontHeight * 1.5
       
-      currentCursorHeight += stdFontHeight * 2.0
-      _ = draw(string: "Male Offspring", using: arial12, inset: 1, underlined: true)
-      _ = draw(string: "Female Offspring", using: arial12, inset: 6, underlined: true)
+      _ = drawtoHalfWay(string: "Male Offspring", using: arial12, underlined: true)
+      currentCursorHeight += drawFromHalfWay(string: "Female Offspring", using: arial12, underlined: true) + 4.0
 
-      currentCursorHeight += stdFontHeight * 1.25
       currentOffspring = 0
       while currentCursorHeight <= pageRect.height {
         if currentOffspring >= maxOffspring {
           break
         }
-        var increment: CGFloat = 0.0
-        if currentOffspring <= numberMales {
-          increment = draw(string: maleOffspring[currentOffspring], using: calibri12, inset: 1)
+        let maleTextHeight: CGFloat
+        let femaleTextHeight: CGFloat
+        if currentOffspring < numberMales {
+          maleTextHeight = drawtoHalfWay(kitten: maleOffspring[currentOffspring], using: calibri12)
+        } else {
+          maleTextHeight = 0.0
         }
-        if currentOffspring <= numberFemales {
-          increment = draw(string: femaleOffspring[currentOffspring], using: calibri12, inset: 6)
+        
+        if currentOffspring < numberFemales {
+          femaleTextHeight = drawFromHalfWay(kitten: femaleOffspring[currentOffspring], using: calibri12)
+        } else {
+          femaleTextHeight = 0.0
         }
         currentOffspring += 1
-        currentCursorHeight += increment
+        currentCursorHeight += max(maleTextHeight, femaleTextHeight)
       }
 
     } else {
       currentCursorHeight = pageRect.minY + 10.0
-      _ = draw(string: "Male Offspring (Cont)", using: arial12, inset: 1, underlined: true)
-      _ = draw(string: "Female Offspring (Cont)", using: arial12, inset: 6, underlined: true)
+      _ = drawtoHalfWay(string: "Male Offspring (Cont)", using: arial12, underlined: true)
+      currentCursorHeight += drawFromHalfWay(string: "Female Offspring (Cont)", using: arial12, underlined: true) + 4.0
       
-      currentCursorHeight += stdFontHeight * 1.25
-
       while currentCursorHeight <= pageRect.height {
         if currentOffspring >= maxOffspring {
           break
         }
-        var increment: CGFloat = 0.0
+        let maleTextHeight: CGFloat
+        let femaleTextHeight: CGFloat
         if currentOffspring < numberMales {
-          increment = draw(string: maleOffspring[currentOffspring], using: calibri12, inset: 1)
+          maleTextHeight = drawtoHalfWay(kitten: maleOffspring[currentOffspring], using: calibri12)
+        } else {
+          maleTextHeight = 0.0
         }
+        
         if currentOffspring < numberFemales {
-          increment = draw(string: femaleOffspring[currentOffspring], using: calibri12, inset: 6)
+          femaleTextHeight = drawFromHalfWay(kitten: femaleOffspring[currentOffspring], using: calibri12)
+        } else {
+          femaleTextHeight = 0.0
         }
         currentOffspring += 1
-        currentCursorHeight += increment
+        currentCursorHeight += max(maleTextHeight, femaleTextHeight)
       }
     }
     
