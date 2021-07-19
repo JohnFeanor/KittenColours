@@ -10,56 +10,35 @@
 		4F0C9E3121B1F1E40035034C /* KittenColours Help in Resources */ = {isa = PBXBuildFile; fileRef = 4F0C9E3021B1F1E30035034C /* KittenColours Help */; };
 		4F56793721B4FC7800DBC9BF /* PrintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56793621B4FC7800DBC9BF /* PrintView.swift */; };
 		4F7112AA219CC31700E3AA4E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7112A9219CC31700E3AA4E /* Globals.swift */; };
-		4F7112AB219CC31700E3AA4E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7112A9219CC31700E3AA4E /* Globals.swift */; };
 		4F72DC4A219EC15000EB7C7D /* FemaleCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72DC49219EC15000EB7C7D /* FemaleCat.swift */; };
-		4F72DC4B219EC15000EB7C7D /* FemaleCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72DC49219EC15000EB7C7D /* FemaleCat.swift */; };
 		4F77BC0721B142C20011162A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4F77BC0621B142C20011162A /* Credits.rtf */; };
 		4FA0DAFC219D76A900D1BB42 /* Coat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA0DAFB219D76A900D1BB42 /* Coat.swift */; };
-		4FA0DAFD219D76A900D1BB42 /* Coat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA0DAFB219D76A900D1BB42 /* Coat.swift */; };
 		4FCB26BE219C312D00987537 /* MaleCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB26BD219C312D00987537 /* MaleCat.swift */; };
-		4FCB26BF219C312D00987537 /* MaleCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB26BD219C312D00987537 /* MaleCat.swift */; };
 		4FEEB4882199838300DE075C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEB4872199838300DE075C /* AppDelegate.swift */; };
 		4FEEB48A2199838400DE075C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FEEB4892199838400DE075C /* Assets.xcassets */; };
 		4FEEB48D2199838400DE075C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FEEB48B2199838400DE075C /* MainMenu.xib */; };
-		4FEEB4992199838400DE075C /* ReadCatColourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEB4982199838400DE075C /* ReadCatColourTests.swift */; };
 		4FEEB4A5219983B800DE075C /* MyWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEB4A3219983B800DE075C /* MyWindowController.swift */; };
 		4FEEB4A6219983B800DE075C /* MyWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FEEB4A4219983B800DE075C /* MyWindowController.xib */; };
 		4FF62938219AD90D00FC7019 /* Chromosome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF62937219AD90D00FC7019 /* Chromosome.swift */; };
 		4FF6293A219AD93400FC7019 /* Gene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF62939219AD93400FC7019 /* Gene.swift */; };
-		4FF6293B219AD93400FC7019 /* Gene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF62939219AD93400FC7019 /* Gene.swift */; };
 		4FF6293D219AD95A00FC7019 /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6293C219AD95A00FC7019 /* Pair.swift */; };
-		4FF6293E219AD95A00FC7019 /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6293C219AD95A00FC7019 /* Pair.swift */; };
 		4FF62940219AD99B00FC7019 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6293F219AD99B00FC7019 /* Cat.swift */; };
-		4FF62941219AD99B00FC7019 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6293F219AD99B00FC7019 /* Cat.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4FEEB4952199838400DE075C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4FEEB47C2199838300DE075C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4FEEB4832199838300DE075C;
-			remoteInfo = ReadCatColour;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4F0C9E3021B1F1E30035034C /* KittenColours Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "KittenColours Help"; sourceTree = "<group>"; };
-		4F16AFE821BB8A4E00DCFB44 /* KittenColours.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = KittenColours.entitlements; sourceTree = "<group>"; };
 		4F56793621B4FC7800DBC9BF /* PrintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintView.swift; sourceTree = "<group>"; };
 		4F7112A9219CC31700E3AA4E /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		4F72DC49219EC15000EB7C7D /* FemaleCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleCat.swift; sourceTree = "<group>"; };
 		4F77BC0621B142C20011162A /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		4F77BC0921B145BB0011162A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F7B895321C5E3570091EDBF /* KittenColours.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KittenColours.entitlements; sourceTree = "<group>"; };
 		4FA0DAFB219D76A900D1BB42 /* Coat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coat.swift; sourceTree = "<group>"; };
 		4FCB26BD219C312D00987537 /* MaleCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaleCat.swift; sourceTree = "<group>"; };
 		4FEEB4842199838300DE075C /* KittenColours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KittenColours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FEEB4872199838300DE075C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FEEB4892199838400DE075C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FEEB48C2199838400DE075C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		4FEEB4942199838400DE075C /* KittenColoursTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KittenColoursTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FEEB4982199838400DE075C /* ReadCatColourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadCatColourTests.swift; sourceTree = "<group>"; };
-		4FEEB49A2199838400DE075C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FEEB4A3219983B800DE075C /* MyWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWindowController.swift; sourceTree = "<group>"; };
 		4FEEB4A4219983B800DE075C /* MyWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyWindowController.xib; sourceTree = "<group>"; };
 		4FF62937219AD90D00FC7019 /* Chromosome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chromosome.swift; sourceTree = "<group>"; };
@@ -76,13 +55,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FEEB4912199838400DE075C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				4FEEB4862199838300DE075C /* KittenColours */,
-				4FEEB4972199838400DE075C /* KittenColoursTests */,
 				4FEEB4852199838300DE075C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				4FEEB4842199838300DE075C /* KittenColours.app */,
-				4FEEB4942199838400DE075C /* KittenColoursTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,7 +77,7 @@
 		4FEEB4862199838300DE075C /* KittenColours */ = {
 			isa = PBXGroup;
 			children = (
-				4F16AFE821BB8A4E00DCFB44 /* KittenColours.entitlements */,
+				4F7B895321C5E3570091EDBF /* KittenColours.entitlements */,
 				4FEEB4872199838300DE075C /* AppDelegate.swift */,
 				4FEEB4A3219983B800DE075C /* MyWindowController.swift */,
 				4F56793621B4FC7800DBC9BF /* PrintView.swift */,
@@ -127,15 +97,6 @@
 				4F77BC0621B142C20011162A /* Credits.rtf */,
 			);
 			path = KittenColours;
-			sourceTree = "<group>";
-		};
-		4FEEB4972199838400DE075C /* KittenColoursTests */ = {
-			isa = PBXGroup;
-			children = (
-				4FEEB4982199838400DE075C /* ReadCatColourTests.swift */,
-				4FEEB49A2199838400DE075C /* Info.plist */,
-			);
-			path = KittenColoursTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,24 +119,6 @@
 			productReference = 4FEEB4842199838300DE075C /* KittenColours.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4FEEB4932199838400DE075C /* KittenColoursTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4FEEB4A02199838400DE075C /* Build configuration list for PBXNativeTarget "KittenColoursTests" */;
-			buildPhases = (
-				4FEEB4902199838400DE075C /* Sources */,
-				4FEEB4912199838400DE075C /* Frameworks */,
-				4FEEB4922199838400DE075C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4FEEB4962199838400DE075C /* PBXTargetDependency */,
-			);
-			name = KittenColoursTests;
-			productName = ReadCatColourTests;
-			productReference = 4FEEB4942199838400DE075C /* KittenColoursTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,23 +126,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = Feanor;
 				TargetAttributes = {
 					4FEEB4832199838300DE075C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1150;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};
 						};
-					};
-					4FEEB4932199838400DE075C = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 4FEEB4832199838300DE075C;
 					};
 				};
 			};
@@ -217,7 +157,6 @@
 			projectRoot = "";
 			targets = (
 				4FEEB4832199838300DE075C /* KittenColours */,
-				4FEEB4932199838400DE075C /* KittenColoursTests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,13 +171,6 @@
 				4F0C9E3121B1F1E40035034C /* KittenColours Help in Resources */,
 				4FEEB48A2199838400DE075C /* Assets.xcassets in Resources */,
 				4FEEB48D2199838400DE075C /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4FEEB4922199838400DE075C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,30 +195,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FEEB4902199838400DE075C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4FF62941219AD99B00FC7019 /* Cat.swift in Sources */,
-				4FCB26BF219C312D00987537 /* MaleCat.swift in Sources */,
-				4F7112AB219CC31700E3AA4E /* Globals.swift in Sources */,
-				4FF6293B219AD93400FC7019 /* Gene.swift in Sources */,
-				4F72DC4B219EC15000EB7C7D /* FemaleCat.swift in Sources */,
-				4FEEB4992199838400DE075C /* ReadCatColourTests.swift in Sources */,
-				4FA0DAFD219D76A900D1BB42 /* Coat.swift in Sources */,
-				4FF6293E219AD95A00FC7019 /* Pair.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4FEEB4962199838400DE075C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4FEEB4832199838300DE075C /* KittenColours */;
-			targetProxy = 4FEEB4952199838400DE075C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4FEEB48B2199838400DE075C /* MainMenu.xib */ = {
@@ -326,13 +235,14 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application: John Sandercock (MW4BK677PW)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -359,6 +269,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -388,13 +299,14 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application: John Sandercock (MW4BK677PW)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -414,6 +326,7 @@
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -422,9 +335,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = KittenColours/KittenColours.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MW4BK677PW;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/KittenColours/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -433,7 +348,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.KittenColours;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -442,9 +357,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = KittenColours/KittenColours.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MW4BK677PW;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/KittenColours/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,49 +370,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.KittenColours;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		4FEEB4A12199838400DE075C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = MW4BK677PW;
-				INFOPLIST_FILE = ReadCatColourTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.ReadCatColourTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KittenColours.app/Contents/MacOS/KittenColours";
-			};
-			name = Debug;
-		};
-		4FEEB4A22199838400DE075C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = MW4BK677PW;
-				INFOPLIST_FILE = ReadCatColourTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.ReadCatColourTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KittenColours.app/Contents/MacOS/KittenColours";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -516,15 +391,6 @@
 			buildConfigurations = (
 				4FEEB49E2199838400DE075C /* Debug */,
 				4FEEB49F2199838400DE075C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4FEEB4A02199838400DE075C /* Build configuration list for PBXNativeTarget "KittenColoursTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4FEEB4A12199838400DE075C /* Debug */,
-				4FEEB4A22199838400DE075C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
