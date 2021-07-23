@@ -155,7 +155,7 @@ class PrintView: NSView {
       let boxWidth = (pageRect.maxX - pageRect.minX) / 2.0 - x - 70.0
       let stringSize = kitten.colour.size(withAttributes: [NSAttributedString.Key.font : font])
       let boxHeight: CGFloat = stringSize.height * heightMultiplier(stringWidth: stringSize.width, boxWidth: boxWidth)
-      let drawBox = NSRect(x: startX + 70.0, y: currentCursorHeight, width: boxWidth, height: boxHeight)
+      let drawBox = NSRect(x: startX + 68.0, y: currentCursorHeight, width: boxWidth, height: boxHeight)
       let attributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.font : font]
 
       kitten.colour.draw(in: drawBox, withAttributes: attributes)
@@ -163,9 +163,9 @@ class PrintView: NSView {
     }
     
     func drawFromHalfWay(kitten: Offspring, using font: NSFont) -> CGFloat {
-      let startX = (pageRect.maxX - pageRect.minX) / 2.0 + 5.0
+      let startX = (pageRect.maxX - pageRect.minX) / 2.0 + 4.0
       drawInBox(string: kitten.chance, startingAt: startX, withWidth: 65.0, using: font)
-      return drawToEndOfLine(string: kitten.colour, startingAt: startX + 65.0 - pageRect.minX, using: font)
+      return drawToEndOfLine(string: kitten.colour, startingAt: startX + 68.0 - pageRect.minX, using: font)
     }
     
     func drawFromHalfWay(string: String, using font: NSFont, underlined: Bool = false) -> CGFloat {
