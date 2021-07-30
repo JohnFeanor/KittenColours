@@ -12,12 +12,14 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
   
   var mainWindowController: MyWindowController?
+  @objc var saveable = false
 
   @IBOutlet weak var window: NSWindow!
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     // Create a window controller
     let mainWindowController = MyWindowController()
+    mainWindowController.appDelegate = self
     //Put the window of the window controller on screen
     mainWindowController.showWindow(self)
     
@@ -32,6 +34,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   @IBAction func printMatingOutcome(_ sender: NSMenuItem) {
   mainWindowController?.printMatingOutcome(sender)
   }
-
+  
+  @IBAction func saveMatingOutcome(_ sender: NSMenuItem) {
+    mainWindowController?.saveMatingOutcome(sender)
+  }
+  
 }
 

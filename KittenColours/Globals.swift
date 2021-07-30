@@ -8,18 +8,84 @@
 
 import Foundation
 
+
+struct Offspring {
+  var chance: String
+  var colour: String
+}
+
+// MARK: Helper functions for error handling
+fileprivate func log(_ items: [Any], separator: String = " ", terminator: String = "\n", marker: String, file: String, function: String, line: Int) {
+  let lastSlashIndex = (file.lastIndex(of: "/") ?? String.Index(utf16Offset: 0, in: file))
+  let nextIndex = file.index(after: lastSlashIndex)
+  let filename = file.suffix(from: nextIndex).replacingOccurrences(of: ".swift", with: "")
+  
+  let prefix = "\(marker) \(filename).\(function):\(line)"
+  
+  let message = items.map {"\($0)"}.joined(separator: separator)
+  print("\(prefix) \(message)", terminator: terminator)
+}
+
+func errormsg(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, function: String = #function) {
+  log(items, separator: separator, terminator: terminator, marker: "😢", file: file, function: function, line: line)
+}
+
 enum ParameterError: Error {
   case nilValue
   case incorrectValue(value: String)
 }
 
-extension Array {
-  public subscript(safe index: Int) -> Element? {
+extension Array where Element == Offspring {
+  internal subscript(safe index: Int) -> Element {
     guard index >= 0, index < endIndex else {
-      return nil
+      return Offspring(chance: "", colour: "")
     }
     
     return self[index]
+  }
+}
+
+extension Array {
+  internal subscript(safe index: Int) -> Element? {
+    guard index >= 0, index < endIndex else {
+      return nil
+    }
+    return self[index]
+  }
+}
+
+// MARK: functions to convert types into and from Data
+protocol Datamaker {
+  var data: Data {get }
+}
+
+extension String: Datamaker {
+  var data: Data {
+    if let ans = self.data(using: String.Encoding.utf8) {
+      return ans
+    } else {
+      fatalError("Cannot encode \"\(self)\"")
+    }
+  }
+}
+
+extension Data {
+  mutating func add(data: Datamaker ...) {
+    for datum in data {
+      self.append(datum.data)
+    }
+  }
+}
+
+extension Data {
+  var string: NSAttributedString {
+    let s: NSAttributedString
+    do {
+      s = try NSAttributedString(data: self, documentAttributes: nil)
+    } catch {
+      return NSAttributedString(string: "🌩")
+    }
+    return s
   }
 }
 
@@ -40,3 +106,17 @@ func set(flag:  inout Bool, to: Bool) {
     flag = to
   }
 }
+
+// MARK: Function to read in files from the Bundle
+func readFile(_ fileName: String) -> Data {
+  let path = Bundle.main.path(forResource: fileName, ofType: "txt")
+  
+  if let path = path {
+    let d = FileManager.default.contents(atPath: path)
+    if let d = d {
+      return d
+    }
+  }
+  fatalError("Cannot read data from \"\(fileName).txt\"")
+}
+

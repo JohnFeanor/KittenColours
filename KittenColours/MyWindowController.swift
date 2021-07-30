@@ -8,13 +8,9 @@
 
 import Cocoa
 
-
-struct Offspring {
-  var chance: String
-  var colour: String
-}
-
 class MyWindowController: NSWindowController {
+  
+  var appDelegate: AppDelegate? = nil
   
   // Screen view outlets
   @IBOutlet weak var progress: NSProgressIndicator!
@@ -22,25 +18,10 @@ class MyWindowController: NSWindowController {
   @IBOutlet var damCat: FemaleCat!
   @IBOutlet weak var femaleOffspringTextField: NSTextField!
   @IBOutlet weak var maleOffspringTextField: NSTextField!
-//
-//  @objc dynamic var maleOffspring = "" {
-//    didSet {
-//      maleOffspringTextField.stringValue = maleOffspring
-//      maleOffspringTextField.sizeToFit()
-//
-//    }
-//  }
-//
-//  @objc dynamic var femaleOffspring = "" {
-//    didSet {
-//      femaleOffspringTextField.stringValue = femaleOffspring
-//      femaleOffspringTextField.sizeToFit()
-//    }
-//  }
   
   var maleOffspring: [Offspring] = []
   var femaleOffspring: [Offspring] = []
-
+  
   override var windowNibName: String {
     return "MyWindowController"
   }
@@ -58,6 +39,8 @@ class MyWindowController: NSWindowController {
   
   
   @objc func determineOffspring(){
+    appDelegate?.saveable = true
+    
     progress.startAnimation(self)
     let kittens = sireCat.mated(with: damCat)
     let boyKittens = kittens.boys
@@ -71,7 +54,7 @@ class MyWindowController: NSWindowController {
     femaleOffspring = []
     for color in boyKittens {
       guard let color = color as? String
-        else { print("color is not a color"); break }
+      else { print("color is not a color"); break }
       let totalChances = boyKittens.count(for: color)
       let gcd = gcdr(totalChances, count)
       let reducedPossibilities = count / gcd
@@ -83,7 +66,7 @@ class MyWindowController: NSWindowController {
     
     for color in girlKittens {
       guard let color = color as? String
-        else { print("color is not a color"); break }
+      else { print("color is not a color"); break }
       let totalChances = girlKittens.count(for: color)
       let gcd = gcdr(totalChances, count)
       let reducedPossibilities = count / gcd
@@ -94,13 +77,13 @@ class MyWindowController: NSWindowController {
       progress.display()
     }
     femaleOffspring.sort(by: { $0.colour.count < $1.colour.count})
-
+    
     maleOffspringTextField.stringValue = maleOffspring.reduce("", { $0 + $1.chance + " " + $1.colour + "\n" })
     maleOffspringTextField.sizeToFit()
-
+    
     femaleOffspringTextField.stringValue = femaleOffspring.reduce("", { $0 + $1.chance + " " + $1.colour + "\n" })
     femaleOffspringTextField.sizeToFit()
-
+    
     progress.stopAnimation(self)
     progress.isHidden = true
   }
@@ -109,6 +92,70 @@ class MyWindowController: NSWindowController {
   func printMatingOutcome(_ sender: NSMenuItem) {
     let printView = PrintView(sire: sireCat, dam: damCat, maleOffspring: maleOffspring, femaleOffspring: femaleOffspring)
     printView.printView(sender)
+  }
+  
+  /// Saves the outcome of the current mating as a RTF file
+  func saveMatingOutcome(_ sender: NSMenuItem) {
+    let myData = generateData(sire: sireCat, dam: damCat, maleOffspring: maleOffspring, femaleOffspring: femaleOffspring)
+    let savePanel = NSSavePanel()
+    savePanel.allowedFileTypes = ["rtf"]
+    savePanel.isExtensionHidden = false
+    savePanel.canSelectHiddenExtension = false
+    savePanel.nameFieldStringValue = "untitled.rtf"
+    
+    savePanel.beginSheetModal(for: window!, completionHandler: {
+      [unowned savePanel] (result) in
+      if result == NSApplication.ModalResponse.OK {
+        self.save(theData: myData, to: savePanel.url)
+      }
+    })
+  }
+  
+  func save(theData: Data, to thisURL: URL?) {
+    guard let thisURL = thisURL else { return }
+    do {
+      try theData.write(to: thisURL)
+    } catch  {
+      errormsg("Error writing file: \(error.localizedDescription)")
+    }
+  }
+    
+  func generateData(sire: Cat, dam: Cat, maleOffspring: [Offspring], femaleOffspring: [Offspring]) -> Data {
+    var theData = readFile("00")
+    theData.append(parentDetails(cat: sire))
+    theData.append(readFile("03"))
+    theData.append(parentDetails(cat: dam))
+    theData.append(readFile("06"))
+    //Now add the mating outcomes
+    let numOffspring = max(maleOffspring.count, femaleOffspring.count)
+    for count in 0..<numOffspring {
+      theData.append(readFile("start_row"))
+      let str1 = """
+       \\f3\\b0\\fs22 \\cf0 \(maleOffspring[safe: count].chance)\\cell
+       \\pard\\intbl\\itap1\\pardeftab720\\ri0\\sa240\\partightenfactor0
+       \\cf0 \(maleOffspring[safe: count].colour)\\cell
+       \\pard\\intbl\\itap1\\pardeftab720\\ri0\\sa240\\partightenfactor0
+       \\cf0 \(femaleOffspring[safe: count].chance)\\cell
+       \\pard\\intbl\\itap1\\pardeftab720\\ri0\\sa240\\partightenfactor0
+       \\cf0 \(femaleOffspring[safe: count].colour)\\cell \\row
+
+       """
+      theData.add(data: str1)
+    }
+    theData.append(readFile("end_file"))
+    return theData
+  }
+
+  func parentDetails(cat: Cat) -> Data {
+    let text = """
+      \(cat.genome.colour)\\f0\\b \\
+      Carrying: \\f1\\b0 \(cat.recessivesCarried.joined(separator: ", "))
+      
+      \\f0\\b \\
+      Masking: \\f1\\b0 \(cat.colorsMasked.joined(separator: ", "))
+
+      """
+    return text.data
   }
   
 }

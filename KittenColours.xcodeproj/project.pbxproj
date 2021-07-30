@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4F0C9E3121B1F1E40035034C /* KittenColours Help in Resources */ = {isa = PBXBuildFile; fileRef = 4F0C9E3021B1F1E30035034C /* KittenColours Help */; };
+		4F544C0C26B3AAF40067E491 /* end_file.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F544C0926B3AAF30067E491 /* end_file.txt */; };
+		4F544C0D26B3AAF40067E491 /* start_row.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F544C0A26B3AAF40067E491 /* start_row.txt */; };
+		4F544C0E26B3AAF40067E491 /* 00.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F544C0B26B3AAF40067E491 /* 00.txt */; };
+		4F544C1126B3AE240067E491 /* 03.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F544C1026B3AE240067E491 /* 03.txt */; };
+		4F544C1326B3AEDF0067E491 /* 06.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F544C1226B3AEDE0067E491 /* 06.txt */; };
 		4F56793721B4FC7800DBC9BF /* PrintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56793621B4FC7800DBC9BF /* PrintView.swift */; };
 		4F7112AA219CC31700E3AA4E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7112A9219CC31700E3AA4E /* Globals.swift */; };
 		4F72DC4A219EC15000EB7C7D /* FemaleCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72DC49219EC15000EB7C7D /* FemaleCat.swift */; };
@@ -27,6 +32,11 @@
 
 /* Begin PBXFileReference section */
 		4F0C9E3021B1F1E30035034C /* KittenColours Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "KittenColours Help"; sourceTree = "<group>"; };
+		4F544C0926B3AAF30067E491 /* end_file.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = end_file.txt; sourceTree = "<group>"; };
+		4F544C0A26B3AAF40067E491 /* start_row.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start_row.txt; sourceTree = "<group>"; };
+		4F544C0B26B3AAF40067E491 /* 00.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 00.txt; sourceTree = "<group>"; };
+		4F544C1026B3AE240067E491 /* 03.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 03.txt; sourceTree = "<group>"; };
+		4F544C1226B3AEDE0067E491 /* 06.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 06.txt; sourceTree = "<group>"; };
 		4F56793621B4FC7800DBC9BF /* PrintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintView.swift; sourceTree = "<group>"; };
 		4F7112A9219CC31700E3AA4E /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		4F72DC49219EC15000EB7C7D /* FemaleCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleCat.swift; sourceTree = "<group>"; };
@@ -58,6 +68,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F544C0F26B3AAFB0067E491 /* Text files */ = {
+			isa = PBXGroup;
+			children = (
+				4F544C0B26B3AAF40067E491 /* 00.txt */,
+				4F544C1026B3AE240067E491 /* 03.txt */,
+				4F544C1226B3AEDE0067E491 /* 06.txt */,
+				4F544C0926B3AAF30067E491 /* end_file.txt */,
+				4F544C0A26B3AAF40067E491 /* start_row.txt */,
+			);
+			path = "Text files";
+			sourceTree = "<group>";
+		};
 		4FEEB47B2199838300DE075C = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +115,7 @@
 				4FEEB48B2199838400DE075C /* MainMenu.xib */,
 				4FEEB4A4219983B800DE075C /* MyWindowController.xib */,
 				4F77BC0921B145BB0011162A /* Info.plist */,
+				4F544C0F26B3AAFB0067E491 /* Text files */,
 				4F0C9E3021B1F1E30035034C /* KittenColours Help */,
 				4F77BC0621B142C20011162A /* Credits.rtf */,
 			);
@@ -166,8 +189,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F544C1326B3AEDF0067E491 /* 06.txt in Resources */,
+				4F544C1126B3AE240067E491 /* 03.txt in Resources */,
 				4FEEB4A6219983B800DE075C /* MyWindowController.xib in Resources */,
 				4F77BC0721B142C20011162A /* Credits.rtf in Resources */,
+				4F544C0C26B3AAF40067E491 /* end_file.txt in Resources */,
+				4F544C0D26B3AAF40067E491 /* start_row.txt in Resources */,
+				4F544C0E26B3AAF40067E491 /* 00.txt in Resources */,
 				4F0C9E3121B1F1E40035034C /* KittenColours Help in Resources */,
 				4FEEB48A2199838400DE075C /* Assets.xcassets in Resources */,
 				4FEEB48D2199838400DE075C /* MainMenu.xib in Resources */,
@@ -338,7 +366,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MW4BK677PW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/KittenColours/Info.plist";
@@ -347,6 +375,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.KittenColours;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -361,7 +390,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MW4BK677PW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/KittenColours/Info.plist";
@@ -370,6 +399,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.Feanor.KittenColours;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
