@@ -8,6 +8,7 @@
 
 import Foundation
 
+let OffspringHasBeenDetermined = "au.com.feanor.OffspringHasBeenDetermined"
 
 struct Offspring {
   var chance: String

@@ -9,9 +9,7 @@
 import Cocoa
 
 class MyWindowController: NSWindowController {
-  
-  var appDelegate: AppDelegate? = nil
-  
+    
   // Screen view outlets
   @IBOutlet weak var progress: NSProgressIndicator!
   @IBOutlet var sireCat: MaleCat!
@@ -22,6 +20,8 @@ class MyWindowController: NSWindowController {
   var maleOffspring: [Offspring] = []
   var femaleOffspring: [Offspring] = []
   
+  var saveable = false
+  
   override var windowNibName: String {
     return "MyWindowController"
   }
@@ -31,15 +31,19 @@ class MyWindowController: NSWindowController {
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
   }
   
+  /// Function which gets called when the 'Determine Offspring' button is pressed.
+  /// - starts the progress indicator
+  /// - then calls determineOffspring function
   @IBAction func mating(_ sender: NSButton) {
     progress.isHidden = false
     progress.startAnimation(self)
     self.perform(#selector(MyWindowController.determineOffspring), with: nil, afterDelay: 0.1)
   }
   
-  
+  /// Function which actually determines the colours of the offspring from a mating
   @objc func determineOffspring(){
-    appDelegate?.saveable = true
+    let notificationCentre = NotificationCenter.default
+    notificationCentre.post(name: Notification.Name(OffspringHasBeenDetermined), object: self)
     
     progress.startAnimation(self)
     let kittens = sireCat.mated(with: damCat)
@@ -119,7 +123,7 @@ class MyWindowController: NSWindowController {
       errormsg("Error writing file: \(error.localizedDescription)")
     }
   }
-    
+  
   func generateData(sire: Cat, dam: Cat, maleOffspring: [Offspring], femaleOffspring: [Offspring]) -> Data {
     var theData = readFile("00")
     theData.append(parentDetails(cat: sire))
@@ -138,14 +142,14 @@ class MyWindowController: NSWindowController {
        \\cf0 \(femaleOffspring[safe: count].chance)\\cell
        \\pard\\intbl\\itap1\\pardeftab720\\ri0\\sa240\\partightenfactor0
        \\cf0 \(femaleOffspring[safe: count].colour)\\cell \\row
-
+       
        """
       theData.add(data: str1)
     }
     theData.append(readFile("end_file"))
     return theData
   }
-
+  
   func parentDetails(cat: Cat) -> Data {
     let text = """
       \(cat.genome.colour)\\f0\\b \\
@@ -153,7 +157,7 @@ class MyWindowController: NSWindowController {
       
       \\f0\\b \\
       Masking: \\f1\\b0 \(cat.colorsMasked.joined(separator: ", "))
-
+      
       """
     return text.data
   }
