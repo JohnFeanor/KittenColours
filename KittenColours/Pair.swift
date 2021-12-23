@@ -3,7 +3,7 @@
 //  CatColours2
 //
 //  Created by John Sandercock on 11/11/18.
-//  Copyright © 2018 Feanor. All rights reserved.
+//  Copyright © 2021 Feanor. All rights reserved.
 //
 
 import Foundation
@@ -43,7 +43,8 @@ struct Pair<T>: CustomStringConvertible where T: Gene {
       self.second = element
   }
   }
-  /// - first and second genes both become `element`
+  /// Makes both first and second parts of the pair into `element`
+  /// - Parameter element: what both parts of this Pair become
   mutating func fill(with element: T) {
     self.first = element
     self.second = element

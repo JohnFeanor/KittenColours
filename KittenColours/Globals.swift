@@ -3,17 +3,11 @@
 //  ReadCatColour
 //
 //  Created by John Sandercock on 15/11/18.
-//  Copyright © 2018 Feanor. All rights reserved.
+//  Copyright © 2021 Feanor. All rights reserved.
 //
 
 import Foundation
 
-let OffspringHasBeenDetermined = "au.com.feanor.OffspringHasBeenDetermined"
-
-struct Offspring {
-  var chance: String
-  var colour: String
-}
 
 // MARK: Helper functions for error handling
 fileprivate func log(_ items: [Any], separator: String = " ", terminator: String = "\n", marker: String, file: String, function: String, line: Int) {
@@ -92,6 +86,8 @@ extension Data {
 
 // Recursive
 
+/// A recursive function to return the greatest common divisor of two integers
+/// - Returns: an integer which is the greatest common divisor of *dividend* and *divisor*
 func gcdr (_ dividend: Int, _ divisor: Int) -> Int {
   var a = abs(dividend); var b = abs(divisor)
   if (b > a) { swap(&a, &b) }
@@ -109,6 +105,9 @@ func set(flag:  inout Bool, to: Bool) {
 }
 
 // MARK: Function to read in files from the Bundle
+
+/// Reads the file given as a parameter from the Bundle
+/// - Parameter filename: String giving the name of the file to be read in
 func readFile(_ fileName: String) -> Data {
   let path = Bundle.main.path(forResource: fileName, ofType: "txt")
   
