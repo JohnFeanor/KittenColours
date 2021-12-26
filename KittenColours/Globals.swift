@@ -6,8 +6,7 @@
 //  Copyright © 2021 Feanor. All rights reserved.
 //
 
-import Foundation
-
+import SwiftUI
 
 // MARK: Helper functions for error handling
 fileprivate func log(_ items: [Any], separator: String = " ", terminator: String = "\n", marker: String, file: String, function: String, line: Int) {
